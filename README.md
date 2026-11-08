@@ -10,4 +10,4 @@ A single-page personal planner: tasks, focus timer, freelance CRM, LLB study hub
 1. Create a new public repository on GitHub.
 2. Upload `index.html`, `README.md` and `.nojekyll` to the repository root.
 3. Go to Settings > Pages > Source: "Deploy from a branch", Branch: `main`, Folder: `/ (root)`, then Save.
-4. After about a minute your site is live at `https://ilyasali729.github.io/My-Life-OS/`.
+4. After about a minute your site is live at `https://YOUR-USERNAME.github.io/REPO-NAME/`.

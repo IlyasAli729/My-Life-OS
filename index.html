@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>My Life OS</title><style>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>My Life OS</title><link rel="manifest" href="manifest.json"><meta name="theme-color" content="#1f6b57"><link rel="icon" href="icon-192.png"><link rel="apple-touch-icon" href="icon-192.png"><meta name="mobile-web-app-capable" content="yes"><style>
 :root{--bg:#f4f5f2;--card:#fff;--tx:#1d2521;--mu:#68736d;--ac:#1f6b57;--ac2:#e8f1ed;--bd:#dde2de;--wr:#b3441c;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121715;--card:#1a211e;--tx:#e6ece8;--mu:#93a19a;--ac:#5fc4a3;--ac2:#203029;--bd:#2c3833;--wr:#f2946a;color-scheme:dark}}
 html,body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.5 Georgia,'Times New Roman',serif}
@@ -182,4 +182,5 @@ function render(k){const a=document.activeElement,id=a&&a.id,pos=a&&a.selectionS
 $('#nav').innerHTML='<h1>My Life OS</h1>'+NAV.map(n=>`<button class="${n[0]==view?'on':''}" onclick="go('${n[0]}')">${n[1]}</button>`).join('');
 $('#v').innerHTML=VW[view]();bar();if(id&&$('#'+id)){$('#'+id).focus();try{$('#'+id).setSelectionRange(pos,pos)}catch(e){}}}
 render();
+if("serviceWorker" in navigator)window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
 </script></body></html>
